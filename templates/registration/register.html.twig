@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    {% if app.user %}
+    <h1>You are logged in as <span class="usname"> {{ app.user.username }}</span></h1>
+    <p>
+        <a href="{{ path('app_logout') }}" class="links">Logout</a>
+        or go to
+        <a href="{{ path('app_securedArea') }}" class="links">Secured area</a>
+    </p>
+    {% else %}
+    <h1>Register</h1>
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email, {
+            label: "Enter email: "
+        }) }}
+        {{ form_row(registrationForm.username, {
+            label: "Enter username:"
+        }) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Enter password: '
+        }) }}
+        {{ form_row(registrationForm.agreeTerms) }}
+
+    <button class="submit-button" type="submit">Register</button>
+    {{ form_end(registrationForm) }}
+    {% endif %}
+{% endblock %}

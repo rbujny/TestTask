@@ -1,0 +1,16 @@
+#registration_form_email
+{
+    margin-left: 37px;
+}
+#registration_form_username
+{
+    margin-left: 5px;
+}
+#registration_form_plainPassword
+{
+    margin-left: 5px;
+}
+input[type='checkbox']
+{
+    width: 75px;
+}

@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+{% block title %}Secret Area{% endblock %}
+{% block body %}
+    <h1>Secret area for logged users</h1>
+    <button type="button" name="addUser" class="add-user-button">Add user <a href="#" class="fa fa-plus"></a></button>
+    </button>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Edit</th>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td><a href="{{ path('app_securedArea') }}/edit/{{ user.id }}" class="far fa-edit"></a></td>
+            </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}

@@ -1,0 +1,152 @@
+@keyframes slideInFromUp {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromDown {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    row-gap: 50px;
+    background-color: snow;
+    font-family: 'Lato', sans-serif;
+}
+.banner
+{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin: 0;
+    background-color: #5eb5e0;
+    animation: 1s ease-out 0s 1 slideInFromUp;
+}
+.banner h1
+{
+    color: snow;
+    font-size: 48px;
+}
+.content
+{
+    align-self: center;
+    min-height: 400px;
+    background-color: #b4b4b4;
+    padding: 50px;
+    border-radius: 10px 10px;
+    font-size: 18px;
+    animation: 2s ease-out 0s 1 slideInFromUp;
+}
+.content input
+{
+    margin-top: 25px;
+    width: 175px;
+}
+.pass
+{
+    margin-left: 5px;
+}
+.username
+{
+    margin-left: 3px;
+}
+.mail
+{
+    margin-left: 37px;
+}
+.links
+{
+    text-decoration: none;
+    color: black;
+}
+.links:hover
+{
+    color: white;
+}
+.footer
+{
+    order: 2;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin: 0;
+    background-color: #5eb5e0;
+    color: snow;
+    min-height: 25px;
+    font-size: 18px;
+    animation: 1s ease-out 0s 1 slideInFromDown;
+}
+table
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td
+{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+p
+{
+    font-size: 21px;
+}
+.fa-edit
+{
+    color: black;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.fa-edit:hover
+{
+    color: white;
+}
+.fa-plus
+{
+    text-decoration: none;
+    margin-left: 5px;
+    color: black;
+}
+.usname
+{
+    color: snow;
+}
+.loggedUser
+{
+    display: flex;
+    align-self: flex-end;
+    color: #5eb5e0;
+    flex-direction: column;
+    animation: 1.5s ease-out 0s 1 slideInFromRight;
+    height: 10px;
+}
+.loggedUser a
+{
+    text-decoration: none;
+    color: #5eb5e0;
+}
+.loggedUser a:hover
+{
+    color: black;
+}
