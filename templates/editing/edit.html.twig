@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit user{% endblock %}
+
+{% block body %}
+    <h1>Edit an existing user</h1>
+    <span style="font-style: italic; font-size: 16px">{{ user.email }} {{ user.username }} </span>
+    {{ form_start(editForm) }}
+    Change email?<input type="checkbox" id="mail-checkbox" onclick="onEmail()">
+    {{ form_row(editForm.email, {
+        label: "Enter email: "
+    }) }}
+    Change username?<input type="checkbox" id="username-checkbox" onclick="onUsername()">
+    {{ form_row(editForm.username, {
+        label: "Enter username:"
+    }) }}
+    Change password?<input type="checkbox" id="password-checkbox" onclick="onPassword()">
+    {{ form_row(editForm.password, {
+        label: 'Enter password: '
+    }) }}
+
+    <button class="submit-button" type="submit">Commit changes</button>
+    {{ form_end(editForm) }}
+    <script src="{{ asset("js/script.js") }}"></script>
+{% endblock %}

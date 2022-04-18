@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add new user{% endblock %}
+
+{% block body %}
+        <h1>Adding new user</h1>
+
+
+        <span class="chuj">cosglupiego</span>
+        {{ form_start(addForm) }}
+        {{ form_row(addForm.email, {
+            label: "Enter email: "
+        }) }}
+        {{ form_row(addForm.username, {
+            label: "Enter username:"
+        }) }}
+        {{ form_row(addForm.password, {
+            label: 'Enter password: '
+        }) }}
+
+        <button class="submit-button" type="submit">Add</button>
+        {{ form_end(addForm) }}
+{% endblock %}

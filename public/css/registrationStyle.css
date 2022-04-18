@@ -1,0 +1,21 @@
+#registration_form_email, #adding_form_email
+{
+    margin-left: 37px;
+}
+#registration_form_username, #adding_form_username
+{
+    margin-left: 5px;
+}
+#registration_form_plainPassword, #adding_form_password
+{
+    margin-left: 5px;
+}
+input[type='checkbox']
+{
+    width: 75px;
+}
+.correct-message
+{
+    color: green;
+    font-weight: bold;
+}

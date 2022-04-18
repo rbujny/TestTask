@@ -1,9 +1,14 @@
 {% extends "base.html.twig" %}
 {% block title %}Secret Area{% endblock %}
 {% block body %}
+    {% if message == 'Added' %}
+        <p class="correct-message">Your user have been added to database!</p>
+    {% elseif message == 'Edited' %}
+        <p class="correct-message">User have been edited!</p>
+    {% endif %}
     <h1>Secret area for logged users</h1>
-    <button type="button" name="addUser" class="add-user-button">Add user <a href="#" class="fa fa-plus"></a></button>
-    </button>
+    <a href="{{ path('app_securedAreaAdd') }}"><button type="button" name="addUser" class="add-user-button">
+        Add user <i class="fa fa-plus"></i></button></a>
     <table>
         <tr>
             <th>Id</th>
