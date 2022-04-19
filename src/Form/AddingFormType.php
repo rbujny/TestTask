@@ -8,6 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Length;
 
 class AddingFormType extends AbstractType
 {
@@ -16,7 +17,14 @@ class AddingFormType extends AbstractType
         $builder
             ->add('email', EmailType::class)
             ->add('username')
-            ->add('password', PasswordType::class);
+            ->add('password', PasswordType::class,[
+                'constraints' =>
+                new Length([
+                        'min' => 8,
+                        'minMessage' => 'Password should be at least {{ limit }} characters, change it below',
+                        'max' => 4096,
+                ]),
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

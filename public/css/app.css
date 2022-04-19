@@ -63,9 +63,7 @@
 {
     order: 2;
     display: flex;
-    flex-flow: row;
     justify-content: center;
-    margin: 0;
     background-color: #5eb5e0;
     color: snow;
     min-height: 25px;
